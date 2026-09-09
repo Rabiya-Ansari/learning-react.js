@@ -55,7 +55,6 @@ export default function App() {
           </div>
         </section>
 
-        {/* Contact Section */}
         <section className="contact-section" id="contact">
           <div className="contact-content">
             <h2>Contact Us</h2>
