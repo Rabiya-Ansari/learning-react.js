@@ -4,7 +4,7 @@ import './App.css';
 export default function App() {
   return (
     <>
-      {/* Navbar */}
+
       <header className="header">
         <nav className="nav">
           <div className="logo">
@@ -25,7 +25,7 @@ export default function App() {
         </nav>
       </header>
 
-      {/* Hero Section */}
+
       <main>
         <section className="hero" id="home">
           <div className="hero-content">
@@ -42,7 +42,7 @@ export default function App() {
           </div>
         </section>
 
-        {/* About Section */}
+
         <section className="about-section" id="about">
           <div className="about-content">
             <h2>About Us</h2>
@@ -86,7 +86,6 @@ export default function App() {
         </section>
       </main>
 
-      {/* Footer */}
       <footer className="footer">
         <p>
          Footer
