@@ -1,95 +1,25 @@
 import React from "react";
 import './App.css';
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import AboutUs from "./Pages/AboutUs";
+import ContactUs from "./Pages/ContactUs";
+import Home from "./Pages/Home";
 
 export default function App() {
   return (
     <>
+    <BrowserRouter>
 
-      <header className="header">
-        <nav className="nav">
-          <div className="logo">
-            <img src="./favicon.svg" alt="" />
-          </div>
-
-          <ul className="nav-links">
-            <li>
-              <a href="#home">Home</a>
-            </li>
-            <li>
-              <a href="#about">About</a>
-            </li>
-            <li>
-              <a href="#contact">Contact</a>
-            </li>
-          </ul>
-        </nav>
-      </header>
-
-
-      <main>
-        <section className="hero" id="home">
-          <div className="hero-content">
-            <h1>Welcome to My Website</h1>
-
-            <h3>Learning React</h3>
-
-            <p>
-              I am learning React and building modern, responsive websites
-              with it.
-            </p>
-
-            <button>Get Started</button>
-          </div>
-        </section>
-
-
-        <section className="about-section" id="about">
-          <div className="about-content">
-            <h2>About Us</h2>
-
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Reprehenderit, exercitationem. We are learning React and
-              creating simple and beautiful web applications.
-            </p>
-          </div>
-        </section>
-
-        <section className="contact-section" id="contact">
-          <div className="contact-content">
-            <h2>Contact Us</h2>
-
-            <p>
-              Have any questions? Feel free to contact us.
-            </p>
-
-            <form className="contact-form">
-              <input
-                type="text"
-                placeholder="Enter your name"
-              />
-
-              <input
-                type="email"
-                placeholder="Enter your email"
-              />
-
-              <textarea
-                placeholder="Enter your message"
-                rows="5"
-              ></textarea>
-
-              <button type="submit">Send Message</button>
-            </form>
-          </div>
-        </section>
-      </main>
-
-      <footer className="footer">
-        <p>
-         Footer
-        </p>
-      </footer>
+    <Navbar/>
+    <Routes>
+      <Route path="/" element={<Home/>}/>
+      <Route path="about" element={<AboutUs/>}/>
+      <Route path="contact" element={<ContactUs/>}/>
+    </Routes>
+    <Footer/>
+    </BrowserRouter>    
     </>
   );
 }
